@@ -1,4 +1,5 @@
-﻿using System.Threading.Channels;
+﻿using System.Diagnostics;
+using System.Threading.Channels;
 
 namespace Practice.Additionaltest
 {
@@ -6,7 +7,7 @@ namespace Practice.Additionaltest
     {
         static void Main(string[] args)
         {
-            //Tapşırıq 1: Dəyişənlər, Operatorlar və If - Else(Giriş balı hesablama
+            //Tapşırıq 1: Dəyişənlər, Operatorlar və If - Else(Giriş balı hesablama)
             #region task 1
             Console.WriteLine("1 ci imtahan balinizi qeyd edin: ");
             int examOne = Convert.ToInt32(Console.ReadLine());
@@ -77,12 +78,41 @@ namespace Practice.Additionaltest
             #region task 5
             Console.WriteLine("Duzbucaqlinin sahesi: " + CalculateArea(5,6));
             #endregion
+            //Tapşırıq 6: Method Overloading (Həndəsi fiqurlar) Şərt: Eyni adlı Area metodu yaradın.
+            #region task 6
+            Console.WriteLine("Dairenin sahesi: " + Area(5));
+            Console.WriteLine("Duzbucaqlinin sahesi: " + Area(5,6));
+            #endregion
+            //Tapşırıq 7: String Metodları (Tərsinə çevirmə)
+            #region task 7
+            Console.WriteLine(ReverseString("mirhuseyn"));
+            #endregion
+            //
+
             Console.ReadLine();
 
         }
         public static int CalculateArea(int a, int b)
         {
             return a * b;
+        }
+        public static int Area(int a)
+        {
+            int result = (a * a) * 3;
+            return result;
+        }
+        public static int Area(int a, int b)
+        {
+            return a * b;
+        }
+        public static string ReverseString(string text)
+        {
+            string reverseText = "";
+            for(int i = text.Length-1; i >= 0; i--)
+            {
+                reverseText += text[i];
+            }
+            return reverseText.ToLower();
         }
     }
 }
