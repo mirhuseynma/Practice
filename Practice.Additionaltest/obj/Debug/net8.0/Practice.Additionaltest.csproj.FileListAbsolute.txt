@@ -1,0 +1,14 @@
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\bin\Debug\net8.0\Practice.Additionaltest.exe
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\bin\Debug\net8.0\Practice.Additionaltest.deps.json
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\bin\Debug\net8.0\Practice.Additionaltest.runtimeconfig.json
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\bin\Debug\net8.0\Practice.Additionaltest.dll
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\bin\Debug\net8.0\Practice.Additionaltest.pdb
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\obj\Debug\net8.0\Practice.Additionaltest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\obj\Debug\net8.0\Practice.Additionaltest.AssemblyInfoInputs.cache
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\obj\Debug\net8.0\Practice.Additionaltest.AssemblyInfo.cs
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\obj\Debug\net8.0\Practice.Additionaltest.csproj.CoreCompileInputs.cache
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\obj\Debug\net8.0\Practice.Additionaltest.dll
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\obj\Debug\net8.0\refint\Practice.Additionaltest.dll
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\obj\Debug\net8.0\Practice.Additionaltest.pdb
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\obj\Debug\net8.0\Practice.Additionaltest.genruntimeconfig.cache
+C:\Users\abdul\OneDrive\Desktop\Practice\Practice.Additionaltest\obj\Debug\net8.0\ref\Practice.Additionaltest.dll
