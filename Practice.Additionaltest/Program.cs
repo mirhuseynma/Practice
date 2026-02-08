@@ -102,9 +102,21 @@ namespace Practice.Additionaltest
             //Tapşırıq 11: Alqoritm və Massivlər (Sıfırları sona daşımaq)
             #region task 11
             int[] array = { 1, 0, 5, 0, 3, 0, 2 };
-            Console.Write(string.Join("," + ChangeMassive(array)));
+            Console.WriteLine(string.Join("," + ChangeMassive(array)));
             #endregion
-
+            //Tapşırıq 12: String Metodları və Məntiq (Palindrom yoxlanışı)
+            #region task 12
+            string checkPolindrome = "qartal";
+            CheckPolindrome(checkPolindrome);
+            #endregion
+            //Tapşırıq 13: out Parametri ilə Real Ssenari (Login Sistemi)
+            #region task 13
+            string message;
+            string username = "admin";
+            string password = "12345";
+            Console.Write(TryLogin(username,password,out message)+" ");
+            Console.WriteLine(message);
+            #endregion
             Console.ReadLine();
 
         }
@@ -164,5 +176,30 @@ namespace Practice.Additionaltest
                 Console.Write("0,");
             return array;
         }   
+        public static void CheckPolindrome(string checkPolindrome)
+        {
+            string clone = "";
+            for (int i = checkPolindrome.Length - 1; i >= 0; i--)
+            {
+                clone += checkPolindrome[i];
+            }
+            if(clone!=checkPolindrome) Console.WriteLine($"{checkPolindrome} polindrom soz deyil.");
+            else Console.WriteLine($"{checkPolindrome} polindrom sozdur.");
+        }
+        public static bool TryLogin(string username,string password,out string message)
+        {
+            bool trueOrFalse = false;
+            if(username == "admin" && password == "12345")
+            {
+                message = "Giris ugurludur";
+                trueOrFalse = true;
+            }
+            else
+            {
+                message = "Yanlis melumat";
+                trueOrFalse = false; 
+            }
+            return trueOrFalse;
+        }
     }
 }
