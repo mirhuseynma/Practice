@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Reflection.Metadata.Ecma335;
 using System.Threading.Channels;
 
 namespace Practice.Additionaltest
@@ -16,8 +17,8 @@ namespace Practice.Additionaltest
             Console.WriteLine("3 cu imtahan balinizi qeyd edin: ");
             int examThird = Convert.ToInt32(Console.ReadLine());
             int result = examThird + examSecond + examOne;
-            if(examOne > 100 || examSecond > 100 || examThird > 100) Console.WriteLine("Imtahan balinizi duzgun daxil edin: 1 - 100 daxilinde");
-            else if(result / 3 > 65) Console.WriteLine("imthandan kecdiniz");
+            if (examOne > 100 || examSecond > 100 || examThird > 100) Console.WriteLine("Imtahan balinizi duzgun daxil edin: 1 - 100 daxilinde");
+            else if (result / 3 > 65) Console.WriteLine("imthandan kecdiniz");
             else Console.WriteLine("imtahandan kesilddiniz");
             #endregion
             //Tapşırıq 2: Switch Case və Sadə Alqoritm(Hesablayıcı)
@@ -33,7 +34,7 @@ namespace Practice.Additionaltest
             switch (operatorInput)
             {
                 case '+':
-                    Console.WriteLine($"{firstInput} ve {secondInput} ededlerinin cemi: {firstInput+secondInput}");
+                    Console.WriteLine($"{firstInput} ve {secondInput} ededlerinin cemi: {firstInput + secondInput}");
                     break;
                 case '-':
                     Console.WriteLine($"{firstInput} ve {secondInput} ededlerinin ferqi: {firstInput - secondInput}");
@@ -42,12 +43,12 @@ namespace Practice.Additionaltest
                     Console.WriteLine($"{firstInput} ve {secondInput} ededlerinin hasili: {firstInput * secondInput}");
                     break;
                 case '/':
-                    if(firstInput == 0|| secondInput == 0) Console.WriteLine("0 a bolme yoxdur");
+                    if (firstInput == 0 || secondInput == 0) Console.WriteLine("0 a bolme yoxdur");
                     else Console.WriteLine($"{firstInput} ve {secondInput} ededlerinin cemi: {firstInput + secondInput}");
                     break;
                 default:
                     Console.WriteLine("operatoru duzgun daxil edin: +, -, *, /");
-                    break;       
+                    break;
             }
 
             #endregion
@@ -55,7 +56,7 @@ namespace Practice.Additionaltest
             #region task 3
             int fact = 5;
             int sumFact = 1;
-            for(int i = 1; i<=fact; i++)
+            for (int i = 1; i <= fact; i++)
             {
                 sumFact *= i;
             }
@@ -66,7 +67,7 @@ namespace Practice.Additionaltest
             int[] massive = [1, 2, 3, 4];
             int max = massive[0];
             int sumOfArray = 0;
-            for(int i = 0; i<massive.Length; i++)
+            for (int i = 0; i < massive.Length; i++)
             {
                 if (max < massive[i])
                     max = massive[i];
@@ -76,18 +77,33 @@ namespace Practice.Additionaltest
             #endregion
             //Tapşırıq 5: Metodlar və Return Type (Sahə hesablama)
             #region task 5
-            Console.WriteLine("Duzbucaqlinin sahesi: " + CalculateArea(5,6));
+            Console.WriteLine("Duzbucaqlinin sahesi: " + CalculateArea(5, 6));
             #endregion
             //Tapşırıq 6: Method Overloading (Həndəsi fiqurlar) Şərt: Eyni adlı Area metodu yaradın.
             #region task 6
             Console.WriteLine("Dairenin sahesi: " + Area(5));
-            Console.WriteLine("Duzbucaqlinin sahesi: " + Area(5,6));
+            Console.WriteLine("Duzbucaqlinin sahesi: " + Area(5, 6));
             #endregion
             //Tapşırıq 7: String Metodları (Tərsinə çevirmə)
             #region task 7
             Console.WriteLine(ReverseString("mirhuseyn"));
             #endregion
-            //
+            //Tapşırıq 8: ref keyword (Dəyər dəyişimi)
+            #region task 8
+            int a = 10;
+            int b = 15;
+            Swap(ref a, ref b);
+            #endregion
+            //Tapşırıq 9: out keyword və Default Params
+            #region task 9
+            int qalig;
+            Divide(32, out qalig, 2);
+            #endregion
+            //Tapşırıq 11: Alqoritm və Massivlər (Sıfırları sona daşımaq)
+            #region task 11
+            int[] array = { 1, 0, 5, 0, 3, 0, 2 };
+            Console.Write(string.Join("," + ChangeMassive(array)));
+            #endregion
 
             Console.ReadLine();
 
@@ -114,5 +130,39 @@ namespace Practice.Additionaltest
             }
             return reverseText.ToLower();
         }
+        public static void Swap(ref int a, ref int b)
+        {
+            b = a + b;
+            a = b - a;
+            b = b - a;
+            Console.WriteLine($"a: {a}, b: {b}");
+        }
+        public static int Divide(int a, out int qalig, int b = 1)
+        { 
+            string errorMessage = "0 a bolme yoxdur";         
+            int divide = a / b;
+            qalig = a % b;
+            if (a == 0 || b == 0)
+                Console.WriteLine(errorMessage); 
+            else
+            {
+                Console.WriteLine($"qismet: {divide}, qalig: {qalig}");
+            }
+            return divide;
+        }
+        public static int[] ChangeMassive(int[] array)
+        {
+            int count = 0;
+            for(int i = 0; i < array.Length; i++)
+            {
+                if (array[i] != 0)
+                    Console.Write(array[i] + ",");
+                else
+                    count++;
+            }
+            for(int i = 0; i < count; i++)
+                Console.Write("0,");
+            return array;
+        }   
     }
 }

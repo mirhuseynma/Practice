@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Practice.Additionaltest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e68e44c50b11580bdbd46054c2cdfd6e7ab18805")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c80dfaa79c75f708a9d3ce5d85feba1628c385ca")]
 [assembly: System.Reflection.AssemblyProductAttribute("Practice.Additionaltest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Practice.Additionaltest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
